@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>League of Villains</title>
+<meta charset="utf-8">
+
+<link rel="icon" type="image/x-icon" href="images/icon.ico"/>
+<link rel = "stylesheet" href="mainstyle.css">
+
+<script>
+
+
+function heroQuestions(){
+
+
+if (document.getElementById("hno").checked){
+    document.getElementById("hname").style.display = "none";
+    document.getElementById("hnamelabel").style.display = "none";
+  }
+
+if (document.getElementById("hyes").checked){
+    document.getElementById("hname").style.display = "inline";
+  document.getElementById("hnamelabel").style.display = "inline";
+  }
+
+
+}
+
+function villainQuestions(){
+if (document.getElementById("vno").checked){
+    document.getElementById("vname").style.display = "none";
+    document.getElementById("vnamelabel").style.display = "none";
+  }
+
+if (document.getElementById("vyes").checked){
+    document.getElementById("vname").style.display = "inline";
+  document.getElementById("vnamelabel").style.display = "inline";
+  }
+
+
+}
+
+
+
+
+</script>
+
+</head>
+<body>
+<div class = "wrapper">
+<center>
+<header>
+
+</header>
+</center>
+
+
+
+<img src = "images/fullbanner.png">
+
+
+<div class="nav">
+<b>
+   <a href="index.html">Home</a> &nbsp; 
+   <a href="members.html">Members</a>  &nbsp; 
+   <a href="join.html">Join</a>&nbsp; 
+   <a href="events.html">Events</a>
+  </b>
+  </div>
+
+
+
+<h1>Join Us!</h1>
+
+<form>
+<label for="fname">First Name:</label>
+
+<input type="text" id="fname" name="firstname" placeholder="Your first name..">
+&nbsp; &nbsp; 
+<label for="lname">Last Name:</label>
+<input type="text" id="lname" name="lastname" placeholder="Your last name..">
+<br> <br>
+<label for="hero">Have you ever worked as a hero before?</label>&nbsp; 
+<input type="radio" onclick="heroQuestions();" id="hyes" name="hero" value="Yes"><label for="hyes">Yes</label>
+<input type="radio" onclick="heroQuestions();" id="hno" name="hero" value="No"><label for="hno">No</label><br><br>
+<label for="heroname" id = "hnamelabel">Hero Name:</label>&nbsp; 
+<input type="text" id="hname" name="heroname" placeholder="Your hero name.."> <br><br>
+<br>
+<label for="villain">Have you ever worked as a villain before?</label>&nbsp; 
+<input type="radio" onclick="villainQuestions();" id="vyes" name="villain" value="Yes"><label for="vyes">Yes</label>
+<input type="radio" onclick="villainQuestions();" id="vno" name="villain" value="No"><label for="vno">No</label><br><br>
+<label for="villainname" id = "vnamelabel">Villain Name:</label>&nbsp; 
+<input type="text" id="vname" name="villainname" placeholder="Your villain name.."> <br><br>
+
+<center>
+ <button type="button" onclick="alert('Thank you for your submission! We will get into contact with you soon :)')">Submit</button> 
+</center>
+
+</form>
+
+
+
+<footer>
+Copyright &copy; 2021 AFO Inc.<br>
+<a href="mailto:recruiting@lov.com">recruiting@lov.com</a>
+</footer>
+</div>
+</body>
+</html>
